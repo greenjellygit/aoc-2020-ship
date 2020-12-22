@@ -1,0 +1,6 @@
+<div class="command-container">
+  <div *ngFor="let command of commands; let i = index" class="elem" [ngClass]="{'first' : i == 0}">
+    {{command.name}}
+    {{command.value}}
+  </div>
+</div>

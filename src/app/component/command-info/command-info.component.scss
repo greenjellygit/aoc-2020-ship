@@ -1,0 +1,23 @@
+.command-container {
+  height: 241px;
+  width: 50px;
+  border: 1px solid wheat;
+  overflow: hidden;
+}
+
+:host {
+  margin-left: 50px;
+}
+
+.elem {
+  color: #9acd32;
+  font-size: 13px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-family: monospace;
+  margin-left: 1px;
+
+  &.first {
+    background-color: #3b4f15;
+  }
+}

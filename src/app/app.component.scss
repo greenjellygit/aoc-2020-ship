@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+}
+
+:host {
+  margin:auto;
+  height: 200px;
+  width: 200px;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.waypoint {
+  position: absolute;
+  transition: all linear 500ms;
+
+  .image {
+    background-image: url("../assets/waypoint.png");
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
+    margin-left: -8px;
+    margin-top: -8px;
+  }
+}
+
+.ship {
+  position: absolute;
+  transition: left linear 500ms, top linear 500ms;
+
+  .image {
+    background-image: url("../assets/ship.png");
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 33px;
+    margin-left: -16px;
+    margin-top: -16px;
+    transition: transform linear 500ms;
+  }
+}
+
+.line {
+  position: absolute;
+
+  polyline {
+    stroke-width: 2;
+    stroke-dasharray: 3, 5;
+    shape-rendering: crispEdges;
+    stroke-linecap: round;
+    stroke: rgb(245 255 85);
+  }
+}
+
+.border {
+  position: absolute;
+  background-image: url("../assets/border.png");
+  background-repeat: no-repeat;
+  width: 330px;
+  height: 330px;
+  background-size: contain;
+  top: -38px;
+  left: -40px;
+}
+
+.text {
+  bottom: -20px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: wheat;
+  font-family: monospace;
+}
