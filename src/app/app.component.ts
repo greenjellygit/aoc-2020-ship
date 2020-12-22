@@ -824,7 +824,7 @@ F54`;
     this.updateShipPosition();
     this.updateWaypointPosition();
     this.update();
-    const subscription = interval(250)
+    const subscription = interval(400)
       .subscribe(() => {
         if (this.ship.isFinished()) {
           subscription.unsubscribe();
@@ -870,7 +870,7 @@ F54`;
   }
 
   private updateWaypointPosition() {
-    this.waypointPosition = this.shipPosition.add(this.ship.waypoint);
+    this.waypointPosition = (this.shipPosition.add(this.ship.waypoint.normalize().mulByScalar(50)));
     this.waypointStyle = {
       left: this.waypointPosition.x + 'px',
       top: this.waypointPosition.y + 'px'

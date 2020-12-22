@@ -19,7 +19,7 @@ export class ScrollableBackgroundComponent {
   }
 
   @Input() set offset(input: Vector) {
-    this.offsetValue = input.invert();
+    this.offsetValue = input.invert().mulByScalar(0.5);
     this.updateStyle();
   }
 

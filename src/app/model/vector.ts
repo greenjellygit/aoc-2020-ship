@@ -7,8 +7,17 @@ export class Vector {
     this.y = y;
   }
 
+  public mulByScalar(value: number): Vector {
+    return new Vector(this.x * value, this.y * value);
+  }
+
   public add(vector: Vector): Vector {
     return new Vector(this.x + vector.x, this.y + vector.y);
+  }
+
+  public normalize() {
+    const length = Math.sqrt(this.x * this.x + this.y * this.y);
+    return new Vector(this.x / length, this.y / length);
   }
 
   public rotate(angle: number): Vector {
